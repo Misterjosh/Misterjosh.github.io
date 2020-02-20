@@ -1,2 +1,2 @@
 # Misterjosh.github.io
-Project Website
+Personal Repo for Bootcamp stuff.
