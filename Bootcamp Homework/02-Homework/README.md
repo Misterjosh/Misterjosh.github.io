@@ -10,6 +10,8 @@ I have the Horiseon name a link to Google.com
 
 I gave the banner list links to the paragraphs that they are about through internal links.
 
+I made the images on the blue cards have links to wikipedia pages about thier subject matter.
+
 CSS
 
 I fixed the issue with Calibri. It needed '' around it to make it work.
