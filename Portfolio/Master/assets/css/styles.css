@@ -42,10 +42,10 @@ main {
   /* Typography */
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: blue;
 
-  /* Visual */
-  background: blue;
+  /* Visual - Places background color under the logo*/
+  /* background: #4aaaa5; */
 }
 
 /* override bootstrap hover color and border */
@@ -100,7 +100,7 @@ main {
   height: 60px;
 
   /* Visual */
-  background-color: #666;
+  background-color: rgb(19, 250, 192);
 }
 
 .text-muted-footer {
