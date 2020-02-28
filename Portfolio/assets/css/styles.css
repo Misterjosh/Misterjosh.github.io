@@ -4,7 +4,7 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
   /* Visual */
-  background-image: url("../imgs/ignasi_pattern_s.png");
+  background-image: url("../imgs/blue22.jpg");
 }
 
 html {
@@ -100,7 +100,7 @@ main {
   height: 60px;
 
   /* Visual */
-  background-color: rgb(19, 250, 192);
+  background-color: rgb(99, 146, 134);
 }
 
 .text-muted-footer {
@@ -182,3 +182,10 @@ main {
 }
 
 /* END CONTACT FORM PAGE */
+
+.me-photo {
+  width: 225px;
+  height: 275px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
