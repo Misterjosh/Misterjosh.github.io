@@ -103,6 +103,37 @@ var specialArr = [
   '?'
 ]
 
+//Random selection of the "more specific" random arrays.
+var randChar = {
+  number: numRand,
+  lower: lowRand,
+  upper: upRand,
+  special: specialRand
+};
+
+//Length Variable and trying to force a numeric input
+var pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
+console.log(pwLength);
+
+//Guidelines alert
+alert("You may choose 1 to 4 of the following options for your password.");
+
+//Numbers prompt
+var hasNum = confirm("Do you want numbers?");
+console.log(hasNum);
+
+//Lowercase prompt
+var hasLow = confirm("Do you want lowercase letters?");
+console.log(hasLow);
+
+//Uppercase prompt
+var hasUp = confirm("Do you want uppercase letters?");
+console.log(hasUp);
+
+//Special Character prompt
+var hasSpec = confirm("Do you want special characters?");
+console.log(hasSpec);
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -110,32 +141,28 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
-
+  
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
  
 
-//Random Number Function
+//Random Number
 function numRand() {
-  numArr[Math.floor(Math.random() * 10)]
+  return numArr[Math.floor(Math.random() * 10)]
 }
-//Random Lowercase Function
+//Random Lowercase
 function lowRand() {
-  lowArr[Math.floor(Math.random() * 26)]
+  return lowArr[Math.floor(Math.random() * 26)]
 }
-//Random Uppercase Function
+//Random Uppercase
 function upRand() {
-  upperArr[Math.floor(Math.random() * 26)]
+  return upperArr[Math.floor(Math.random() * 26)]
 }
-//Random Special Character Function
+//Random Special Character
 function specialRand() {
-  specialArr[Math.floor(Math.random() * 30)]
+  return specialArr[Math.floor(Math.random() * 30)]
 }
-console.log(numArr[Math.floor(Math.random() * 10)]);
-console.log(lowArr[Math.floor(Math.random() * 26)]);
-console.log(upperArr[Math.floor(Math.random() * 26)]);
-console.log(specialArr[Math.floor(Math.random() * 30)]);
