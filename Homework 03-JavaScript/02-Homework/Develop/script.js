@@ -114,15 +114,13 @@ var randChar = {
 //Length Variable and trying to force a numeric input
 var pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
 console.log(pwLength);
-if (pwLength >=8 || pwLength <=128) {
-  alert("Your password will be " + pwLength +  " characters long.")
+if (pwLength >=8 || pwLength <=128 && pwLength != '') {
+  alert("Your password will be " + pwLength +  " characters long.");
 }
 else {
   alert("You chose a wrong value. Defaulting to 8 characters for length.");
   pwLength = 8;
 }
-
-
 
 //Guidelines alert
 alert("You may choose 1 to 4 of the following options for your password.");
@@ -176,17 +174,17 @@ generateBtn.addEventListener("click", writePassword);
 
 //Random Number
 function numRand() {
-  return numArr[Math.floor(Math.random() * 10)]
+  return numArr[Math.floor(Math.random() * numArr.length)]
 }
 //Random Lowercase
 function lowRand() {
-  return lowArr[Math.floor(Math.random() * 26)]
+  return lowArr[Math.floor(Math.random() * lowArr.length)]
 }
 //Random Uppercase
 function upRand() {
-  return upperArr[Math.floor(Math.random() * 26)]
+  return upperArr[Math.floor(Math.random() * upperArr.length)]
 }
 //Random Special Character
 function specialRand() {
-  return specialArr[Math.floor(Math.random() * 30)]
+  return specialArr[Math.floor(Math.random() * specialArr.length)]
 }
