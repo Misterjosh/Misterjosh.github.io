@@ -1,4 +1,4 @@
-//array for random numbers 0-9
+//array for random numbers
 var numArr = [
   0, 
   1, 
@@ -11,7 +11,7 @@ var numArr = [
   8, 
   9
 ]
-//array for lowercase letters 0-25
+//array for lowercase letters
 var lowArr = [
   'a',
   'b',
@@ -40,7 +40,7 @@ var lowArr = [
   'y',
   'z'
 ]
-//array for uppercase letters 0-25
+//array for uppercase letters
 var upperArr = [
   'A',
   'B',
@@ -69,7 +69,7 @@ var upperArr = [
   'Y',
   'Z'
 ]
-//array for special characters 0-29
+//array for special characters
 var specialArr = [
   ' ',
   '!',
