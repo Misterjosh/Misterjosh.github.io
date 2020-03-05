@@ -114,6 +114,15 @@ var randChar = {
 //Length Variable and trying to force a numeric input
 var pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
 console.log(pwLength);
+if (pwLength >=8 || pwLength <=128) {
+  alert("Your password will be " + pwLength +  " characters long.")
+}
+else {
+  alert("You chose a wrong value. Defaulting to 8 characters for length.");
+  pwLength = 8;
+}
+
+
 
 //Guidelines alert
 alert("You may choose 1 to 4 of the following options for your password.");
@@ -132,6 +141,21 @@ console.log(hasUp);
 
 //Special Character prompt
 var hasSpec = confirm("Do you want special characters?");
+console.log(hasSpec);
+
+//If all are declined alert that all are seclected
+if (hasNum === false && hasLow === false && hasUp === false && hasSpec === false) {
+  alert("By declining any of the selections, you will now recieve all of them.");
+  hasNum = true;
+  hasLow = true;
+  hasUp = true;
+  hasSpec = true;
+}
+
+console.log(pwLength);
+console.log(hasNum);
+console.log(hasLow);
+console.log(hasUp);
 console.log(hasSpec);
 
 // Assignment Code
