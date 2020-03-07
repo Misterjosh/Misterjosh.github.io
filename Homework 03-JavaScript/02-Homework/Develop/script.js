@@ -1,15 +1,15 @@
 //array for random numbers
 var numArr = [
-  0, 
-  1, 
-  2, 
-  3, 
-  4, 
-  5, 
-  6, 
-  7, 
-  8, 
-  9
+  '0', 
+  '1', 
+  '2', 
+  '3', 
+  '4', 
+  '5', 
+  '6', 
+  '7', 
+  '8', 
+  '9'
 ]
 //array for lowercase letters
 var lowArr = [
@@ -103,17 +103,11 @@ var specialArr = [
   '?'
 ]
 
-//Random selection of the "more specific" random arrays.
-var randChar = {
-  number: numRand,
-  lower: lowRand,
-  upper: upRand,
-  special: specialRand
-};
+var pwArr = []
 
 //Length Variable and trying to force a numeric input
 var pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
-console.log(pwLength);
+//console.log(pwLength);
 if (pwLength >=8 && pwLength <=128 && pwLength != '') {
   alert("Your password will be " + pwLength +  " characters long.");
 }
@@ -123,38 +117,67 @@ else {
 }
 
 //Guidelines alert
-alert("You may choose 1 to 4 of the following options for your password.");
+alert("Passwords will all contain lowercase letters.")
+alert("Choose 1 to 3 of the following options for your password.");
 
 //Numbers prompt
 var hasNum = confirm("Do you want numbers?");
-console.log(hasNum);
-
-//Lowercase prompt
-var hasLow = confirm("Do you want lowercase letters?");
-console.log(hasLow);
 
 //Uppercase prompt
 var hasUp = confirm("Do you want uppercase letters?");
-console.log(hasUp);
 
 //Special Character prompt
 var hasSpec = confirm("Do you want special characters?");
-console.log(hasSpec);
 
 //If all are declined alert that all are seclected
-if (hasNum === false && hasLow === false && hasUp === false && hasSpec === false) {
-  alert("By declining any of the selections, you will now recieve all of them.");
+if (hasNum === false && hasUp === false && hasSpec === false) {
+  alert("By declining every option, you will now recieve all of them.");
   hasNum = true;
-  hasLow = true;
   hasUp = true;
   hasSpec = true;
 }
 
 console.log(pwLength);
 console.log(hasNum);
-console.log(hasLow);
 console.log(hasUp);
 console.log(hasSpec);
+
+//If statement to push number array with lower array if user only accepts numbers from prompt
+if(hasNum === true && hasUp === false && hasSpec === false){
+  var selArr = lowArr.concat(numArr);
+}
+
+//If statement to push uppercase array with lower array if user only accepted uppercase letters from prompt
+if(hasNum === false && hasUp === true && hasSpec === false){
+  var selArr = lowArr.concat(upperArr);
+}
+
+//If statement to push random special characters function to selArr array if user accepted special characters from prompt
+if(hasNum === false && hasUp === false && hasSpec === true){
+  var selArr = lowArr.concat(specialArr);
+}
+
+//If statement to push number and uppercase arrays with lowercase array
+if(hasNum === true && hasUp === true && hasSpec === false){
+  var selArr = lowArr.concat(numArr, upperArr);
+}
+
+//If statement to push uppercase and special character arrays with lowercase array
+if(hasNum === false && hasUp === true && hasSpec === true){
+  var selArr = lowArr.concat(upperArr, specialArr);
+}
+
+//If statement to push number and special character arrays together with lowercase array
+if(hasNum === true && hasUp === false && hasSpec === true){
+  var selArr = lowArr.concat(numArr, specialArr);
+}
+
+//If statement to push all arrays together
+if(hasNum === true && hasUp === true && hasSpec === true){
+  var selArr = lowArr.concat(numArr, upperArr, specialArr);
+}
+
+console.log(selArr);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -170,21 +193,13 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
- 
 
-//Random Number
-function numRand() {
-  return numArr[Math.floor(Math.random() * numArr.length)]
-}
-//Random Lowercase
-function lowRand() {
-  return lowArr[Math.floor(Math.random() * lowArr.length)]
-}
-//Random Uppercase
-function upRand() {
-  return upperArr[Math.floor(Math.random() * upperArr.length)]
-}
-//Random Special Character
-function specialRand() {
-  return specialArr[Math.floor(Math.random() * specialArr.length)]
+//Generate Password function needs to do something
+function generatePassword() {
+  for(i=0; i<pwLength; i++) {
+    //selArr[Math.floor(Math.random() * selArr.length)];
+    pwArr.push(selArr[Math.floor(Math.random() * selArr.length)]);
+    var pwVar = pwArr.join('');
+  }
+  return pwVar
 }
