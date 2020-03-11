@@ -1,0 +1,27 @@
+#buttonA, #buttonB, #buttonC, #buttonD {
+    font-weight: bold;
+    width: 300px; 
+}
+
+.anSpace {
+    padding-left: 1em;
+}
+
+#buttonA:hover {
+    background-color: lightsteelblue;
+}
+
+#buttonB:hover {
+    background-color: lightsteelblue;
+}
+
+#buttonC:hover {
+    background-color: lightsteelblue;
+}
+
+#buttonD:hover {
+    background-color: lightsteelblue;
+}
+#questiontext {
+    font-weight: bolder;
+}
