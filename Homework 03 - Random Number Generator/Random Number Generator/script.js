@@ -137,10 +137,10 @@ if (hasNum === false && hasUp === false && hasSpec === false) {
   hasSpec = true;
 }
 
-console.log(pwLength);
-console.log(hasNum);
-console.log(hasUp);
-console.log(hasSpec);
+// console.log(pwLength);
+// console.log(hasNum);
+// console.log(hasUp);
+// console.log(hasSpec);
 
 //If statement to push number array with lower array if user only accepts numbers from prompt
 if(hasNum === true && hasUp === false && hasSpec === false){
@@ -177,7 +177,7 @@ if(hasNum === true && hasUp === true && hasSpec === true){
   var selArr = lowArr.concat(numArr, upperArr, specialArr);
 }
 
-console.log(selArr);
+//console.log(selArr);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -197,7 +197,6 @@ generateBtn.addEventListener("click", writePassword);
 //Generate Password function needs to do something
 function generatePassword() {
   for(i=0; i<pwLength; i++) {
-    //selArr[Math.floor(Math.random() * selArr.length)];
     pwArr.push(selArr[Math.floor(Math.random() * selArr.length)]);
     var pwVar = pwArr.join('');
   }
