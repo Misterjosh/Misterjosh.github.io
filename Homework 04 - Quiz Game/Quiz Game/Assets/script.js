@@ -4,7 +4,7 @@ var aText = document.getElementById("answerA");
 var bText = document.getElementById("answerB");
 var cText = document.getElementById("answerC");
 var dText = document.getElementById("answerD");
-//variable to control growth of progress bar as questions are answered. Bar controlled by style: width
+//variable to control growth of progress bar as questions are answered. Bar controlled by style= width: x%
 var progBar = document.getElementsByClassName("progress-bar");
 //answer arrays to set output of click events
 var aTrue = [a = true, b = false, c = false, d= false]
@@ -17,10 +17,10 @@ var barGrow = 0;
 var questNum = 10;
 //outputs to screen
 qText.textContent;
-aText.tectContent;
-bText.tectContent;
-cText.tectContent;
-dText.tectContent;
+aText.textContent;
+bText.textContent;
+cText.textContent;
+dText.textContent;
 //setting up object to make questions
 function Question(question, answerA, answerB, answerC, answerD) {
     this.question = question;
@@ -39,3 +39,11 @@ var question07 = new Question("Who put the bomp In the bomp bah bomp bah bomp?",
 var question08 = new Question('Is it dangerous to go alone?', 'No', 'Yes', 'only', 'Scuba Steve');
 var question09 = new Question('Who framed Rodger Rabbit?', 'Joshua', 'Jessica', 'Christopher Lloyd', 'Bob Haskins');
 var question10 = new Question('What is Garth Brooks last name?', 'Garth', 'Brooks', 'Algar', 'Htrag');
+//Array to hold question objects in
+var questArr = [question01, question02, question03, question04, question05, question06, question07, question08, question09, question10];
+// pulls values properly from array
+qText.textContent = questArr[0].question;
+aText.textContent = questArr[0].answerA;
+bText.textContent = questArr[0].answerB;
+cText.textContent = questArr[0].answerC;
+dText.textContent = questArr[0].answerD;
