@@ -2,7 +2,7 @@
     font-weight: bold;
     width: 300px; 
 }
-
+/* Padding between badges and text in answer blocks */
 .anSpace {
     padding-left: 1em;
 }
