@@ -22,12 +22,14 @@ bText.textContent;
 cText.textContent;
 dText.textContent;
 //setting up object to make questions
-function Question(question, answerA, answerB, answerC, answerD) {
-    this.question = question;
-    this.answerA = answerA;
-    this.answerB = answerB;
-    this.answerC = answerC;
-    this.answerD = answerD;
+class Question {
+    constructor(question, answerA, answerB, answerC, answerD) {
+        this.question = question;
+        this.answerA = answerA;
+        this.answerB = answerB;
+        this.answerC = answerC;
+        this.answerD = answerD;
+    }
 }
 var question01 = new Question("What is the square root of 4?", '7', '2', "This", '4');
 var question02 = new Question("What is the atomic number of Gold?", "was", '5', '45', '197');
@@ -42,8 +44,22 @@ var question10 = new Question('What is Garth Brooks last name?', 'Garth', 'Brook
 //Array to hold question objects in
 var questArr = [question01, question02, question03, question04, question05, question06, question07, question08, question09, question10];
 // pulls values properly from array
-qText.textContent = questArr[0].question;
-aText.textContent = questArr[0].answerA;
-bText.textContent = questArr[0].answerB;
-cText.textContent = questArr[0].answerC;
-dText.textContent = questArr[0].answerD;
+//qText.textContent = questArr[6].question;
+// aText.textContent = questArr[6].answerA;
+// bText.textContent = questArr[6].answerB;
+// cText.textContent = questArr[6].answerC;
+// dText.textContent = questArr[6].answerD;
+$(document).ready(function(){
+    $('#buttonA').on('click', function(){
+        alert('A button is working')
+    })
+    $('#buttonB').on('click', function(){
+        alert('B button is working')
+    })
+    $('#buttonC').on('click', function(){
+        alert('C button is working')
+    })
+    $('#buttonD').on('click', function(){
+        alert('D button is working')
+    })
+});
