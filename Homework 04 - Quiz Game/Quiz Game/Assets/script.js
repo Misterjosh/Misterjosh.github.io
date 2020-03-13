@@ -21,6 +21,27 @@ aText.textContent;
 bText.textContent;
 cText.textContent;
 dText.textContent;
+
+//Timer
+var timeDisplay = document.getElementById('timerDis');
+var remainingTime = 61;
+
+function timeShow() {
+    var timerVal = setInterval(function(){
+        remainingTime--;
+        timeDisplay.textContent = "Time Remaining: " + remainingTime;
+        if (remainingTime === 0) {
+            clearInterval(timerVal);
+            sendMessage();
+        }
+    }, 1000)
+}
+function sendMessage() {
+    timeDisplay.textContent = " ";
+    qText.textContent = "Game Over";
+}
+timeShow();
+
 //setting up object to make questions
 class Question {
     constructor(question, answerA, answerB, answerC, answerD) {
@@ -44,11 +65,11 @@ var question10 = new Question('What is Garth Brooks last name?', 'Garth', 'Brook
 //Array to hold question objects in
 var questArr = [question01, question02, question03, question04, question05, question06, question07, question08, question09, question10];
 // pulls values properly from array
-//qText.textContent = questArr[6].question;
-// aText.textContent = questArr[6].answerA;
-// bText.textContent = questArr[6].answerB;
-// cText.textContent = questArr[6].answerC;
-// dText.textContent = questArr[6].answerD;
+qText.textContent = questArr[6].question;
+aText.textContent = questArr[6].answerA;
+bText.textContent = questArr[6].answerB;
+cText.textContent = questArr[6].answerC;
+dText.textContent = questArr[6].answerD;
 $(document).ready(function(){
     $('#buttonA').on('click', function(){
         alert('A button is working')
@@ -62,4 +83,5 @@ $(document).ready(function(){
     $('#buttonD').on('click', function(){
         alert('D button is working')
     })
+    
 });

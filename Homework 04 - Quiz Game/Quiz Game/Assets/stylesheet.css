@@ -25,3 +25,7 @@
 #questiontext {
     font-weight: bolder;
 }
+#timerDis {
+    padding: 1em;
+    font-weight: 500;
+}
