@@ -1,6 +1,7 @@
 #buttonA, #buttonB, #buttonC, #buttonD {
     font-weight: bold;
-    width: 300px; 
+    width: 300px;
+    text-align: left; 
 }
 /* Padding between badges and text in answer blocks */
 .anSpace {
@@ -28,4 +29,9 @@
 #timerDis {
     padding: 1em;
     font-weight: 500;
+}
+.hiddenB{
+    font-weight: bold;
+    background-color: red;
+    width: 100px;
 }
