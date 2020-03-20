@@ -17,7 +17,7 @@ $(document).ready(function () {
     //Hour updater functionality
     function hourUpdater() {
         var currentHour = moment().hours();
-
+        clearInterval(timeInt);
         //looping over time blocks. 
         $('.time-block').each(function () {
             //The .split("-")[1] takes the 2nd value from the array it makes, from the string acquired, from the id value of everything with the class time-block. It splits "hour-9" into ['hour', '9']. The 9 is parsed back into a number with parseInt.
@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
 
     //set up interval to see if time needs updated. Every 15 seconds it runs hour updater.
-    setInterval(hourUpdater, 15000);
+    var timeInt = setInterval(hourUpdater, 15000);
     
     //Calling hour updater
     hourUpdater();
@@ -63,7 +63,7 @@ $(document).ready(function () {
     //Displaying current day on page
     $("#currentDay").text(moment().format("dddd, MMMM, Do"));
 
-    //I added the local time borrowing this code from w3schools setInterval example. Calls myTimer every second to update the time.
+    //I added the local time borrowing this code from w3schools setInterval example. Calls myTimer every second to update the time. I left the variable off because I don't want to clear the time.
     setInterval(myTimer, 1000);
 
     function myTimer() {
