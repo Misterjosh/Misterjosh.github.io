@@ -16,6 +16,8 @@ There was a point that I cried over my level of frustration.
 
 This doesn't upset me anymore. I have really put in the time, read, reviewed, watched videos, and googled like crazy. I have put in over 35 hours on this homework alone.
 
-I barely got the password generator to work. I'm just not getting, or completely missing something(s).
+I'm just not getting, or completely missing something(s).
 
 Don't read this as me giving up. I still plan to learn and try. I'm just not on the level of 'make my own quiz game' currently. Hopefully this pandemic gets resolved. I need to start working with a tutor.
+
+P.S. As of March 20th I am making decent progress with the starter code written by brooks. Hopefully I can salvage this train wreck and submit something functional. It is looking like 1/3 of the original plethora of files. I'm optimistic.
