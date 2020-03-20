@@ -63,8 +63,8 @@ $(document).ready(function () {
     //Displaying current day on page
     $("#currentDay").text(moment().format("dddd, MMMM, Do"));
 
-    //I added the local time borrowing this code from w3schools setInterval example
-    var myVar = setInterval(myTimer, 1000);
+    //I added the local time borrowing this code from w3schools setInterval example. Calls myTimer every second to update the time.
+    setInterval(myTimer, 1000);
 
     function myTimer() {
       var d = new Date();
