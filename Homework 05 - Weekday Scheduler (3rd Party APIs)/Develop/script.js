@@ -1,3 +1,5 @@
+//I decided to help my learning process by writing out what everything does.
+//Sorry if it makes it rough to look through :)
 //on ready
 $(document).ready(function () {
 
@@ -5,10 +7,12 @@ $(document).ready(function () {
     $('.saveBtn').on("click", function () {
 
         //get values from the div containing save button
-        //the save button's sibling's (with the class description) value (the text you input)
-        var value = $(this).siblings(".description").val();
+        
         //the save button's parent's attribute (the value of the id)
         var time = $(this).parent().attr("id");
+
+        //the save button's sibling's (with the class description) value (the text you input)
+        var value = $(this).siblings(".description").val();
         
         //saves(sets) to localStorage as
         localStorage.setItem(time, value);
@@ -49,7 +53,7 @@ $(document).ready(function () {
 
 
     //loading local storage saved. At the id #hour-whatever" the class ".description" is filled with the value at 'hour-whatever' from local storage.
-    $('#hour-9 .description').val(localStorage.getItem('hour-9'));
+    $('#hour-09 .description').val(localStorage.getItem('hour-09'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));
     $('#hour-12 .description').val(localStorage.getItem('hour-12'));
