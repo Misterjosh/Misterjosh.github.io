@@ -1,4 +1,4 @@
-//I decided to help my learning process by writing out what everything does.
+//I decided to help my learning process by writing out what everything does. I figure with so many of these looking like the solved, it will show that I went the extra step.
 //Sorry if it makes it rough to look through :)
 //on ready
 $(document).ready(function () {
@@ -53,6 +53,16 @@ $(document).ready(function () {
 
 
     //loading local storage saved. At the id #hour-whatever" the class ".description" is filled with the value at 'hour-whatever' from local storage.
+    //I went with a 24 hour clock and changed all the hour references to a 2 number set up.
+    $('#hour-00 .description').val(localStorage.getItem('hour-00'));
+    $('#hour-01 .description').val(localStorage.getItem('hour-01'));
+    $('#hour-02 .description').val(localStorage.getItem('hour-02'));
+    $('#hour-03 .description').val(localStorage.getItem('hour-03'));
+    $('#hour-04 .description').val(localStorage.getItem('hour-04'));
+    $('#hour-05 .description').val(localStorage.getItem('hour-05'));
+    $('#hour-06 .description').val(localStorage.getItem('hour-06'));
+    $('#hour-07 .description').val(localStorage.getItem('hour-07'));
+    $('#hour-08 .description').val(localStorage.getItem('hour-08'));
     $('#hour-09 .description').val(localStorage.getItem('hour-09'));
     $('#hour-10 .description').val(localStorage.getItem('hour-10'));
     $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -62,7 +72,12 @@ $(document).ready(function () {
     $('#hour-15 .description').val(localStorage.getItem('hour-15'));
     $('#hour-16 .description').val(localStorage.getItem('hour-16'));
     $('#hour-17 .description').val(localStorage.getItem('hour-17'));
-
+    $('#hour-18 .description').val(localStorage.getItem('hour-18'));
+    $('#hour-19 .description').val(localStorage.getItem('hour-19'));
+    $('#hour-20 .description').val(localStorage.getItem('hour-20'));
+    $('#hour-21 .description').val(localStorage.getItem('hour-21'));
+    $('#hour-22 .description').val(localStorage.getItem('hour-22'));
+    $('#hour-23 .description').val(localStorage.getItem('hour-23'));
 
     //Displaying current day on page
     $("#currentDay").text(moment().format("dddd, MMMM, Do"));
