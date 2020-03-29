@@ -1,10 +1,11 @@
+$().ready(function(){
 //Make my contact me email form work properly
 
-//set variable name and tie it to the submit button
-var subBtn = document.getElementsByClassName("submit-btn");
+//prevent submit button from refreshing the page
+$(".submit-btn").on("click", function(event){
+    event.preventDefault();
+    //make sure button functions
+    console.log("submit button clicked");
+})
 
-//Create array to store name, email and message
-var emailInfo = []
-
-//create event listener for submit button variable that executes the subit function
-subBtn.addEventListener("click", alert("The click function works... once I make it.") )
+});
