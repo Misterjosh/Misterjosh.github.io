@@ -32,7 +32,7 @@ $(document).ready(function() {
       url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=e1c35146e4a2edbeb98aaad7633513f6&units=imperial",
       dataType: "json",
       success: function(data) {
-        // console.log(data);
+        console.log(data);
         // create history link for this search
         if (history.indexOf(searchValue) === -1) {
           history.push(searchValue);
@@ -60,8 +60,11 @@ $(document).ready(function() {
         $("#today").append(card);
 
         // call follow-up api endpoints
+        lat = data.coord.lat;
+        lon = data.coord.lon;
+        console.log(lat, lon);
         getForecast(searchValue);
-        //getUVIndex(data.coord.lat, data.coord.lon);
+        getUVIndex(searchValue);
       }
     });
     
@@ -118,6 +121,40 @@ function getForecast(searchValue) {
 
         }
       }
+    }
+  })
+}
+
+//uv index
+var lat = "";
+var lon = "";
+
+function getUVIndex() {
+  $.ajax({
+    type: "GET",
+    url:"http://api.openweathermap.org/data/2.5/uvi?appid=e1c35146e4a2edbeb98aaad7633513f6&lat=" + lat + "&lon=" + lon,
+    dataType: "json",
+    success: function(currentUV) {
+      console.log(currentUV);
+      console.log(currentUV.value);
+      var dispUV = $("<p>").addClass("card-text").text("UV Index: " + currentUV.value);
+      // asssign a color based on the scale associated with uv index (I looked on wikipedia to see their pattern)
+        if(parseInt(currentUV.value) > 0 && parseInt(currentUV.value) <= 3){
+          dispUV.css("background-color", "green");
+        }
+        if(parseInt(currentUV.value) > 3 && parseInt(currentUV.value) <= 6){
+          dispUV.css("background-color", "yellow");
+        }
+        if(parseInt(currentUV.value) > 6 && parseInt(currentUV.value) <= 8){
+          dispUV.css("background-color", "orange");
+        }
+        if(parseInt(currentUV.value) > 8){
+          dispUV.css("background-color", "red");
+        }
+
+      // add UV index to current weather card
+      $("#today .card-body").append(dispUV);
+      
     }
   })
 }
