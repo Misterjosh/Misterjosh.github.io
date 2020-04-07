@@ -51,7 +51,7 @@ $(document).ready(function() {
         var humid = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
         var temp = $("<p>").addClass("card-text").text("Temperature: " + data.main.temp + " °F");
         var cardBody = $("<div>").addClass("card-body");
-        var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+        var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
 
         // merge and add to page
         title.append(img);
@@ -109,7 +109,7 @@ function getForecast(searchValue) {
           var humid = $("<p>").addClass("card-text").text("Humidity: " + fiveDay.list[i].main.humidity + "%");
           var temp = $("<p>").addClass("card-text").text("Temperature: " + fiveDay.list[i].main.temp + " °F");
           var cardBody = $("<div>").addClass("card-body");
-          var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + fiveDay.list[i].weather[0].icon + ".png");
+          var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + fiveDay.list[i].weather[0].icon + ".png");
 
           title.append(img);
           cardBody.append(title, temp, humid, wind);
