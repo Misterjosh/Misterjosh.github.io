@@ -29,7 +29,7 @@ $(document).ready(function() {
   function searchWeather(searchValue) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=e1c35146e4a2edbeb98aaad7633513f6&units=imperial",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=e1c35146e4a2edbeb98aaad7633513f6&units=imperial",
       dataType: "json",
       success: function(data) {
         console.log(data);
@@ -76,7 +76,7 @@ $(document).ready(function() {
 function getForecast(searchValue) {
   $.ajax({
     type: "GET",
-    url:"http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=e1c35146e4a2edbeb98aaad7633513f6&units=imperial",
+    url:"https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=e1c35146e4a2edbeb98aaad7633513f6&units=imperial",
     dataType: "json",
     success: function(fiveDay) {
       console.log(fiveDay);
@@ -132,7 +132,7 @@ var lon = "";
 function getUVIndex() {
   $.ajax({
     type: "GET",
-    url:"http://api.openweathermap.org/data/2.5/uvi?appid=e1c35146e4a2edbeb98aaad7633513f6&lat=" + lat + "&lon=" + lon,
+    url:"https://api.openweathermap.org/data/2.5/uvi?appid=e1c35146e4a2edbeb98aaad7633513f6&lat=" + lat + "&lon=" + lon,
     dataType: "json",
     success: function(currentUV) {
       console.log(currentUV);
