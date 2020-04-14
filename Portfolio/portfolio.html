@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>My Portfolio - Portfolio</title>
+  <title>Portfolio</title>
 
   <!-- Boostrap Stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -65,26 +65,29 @@
       <div class="col-md-8">
         <article class="block">
           <h1 class="block-header">My Portfolio
+            <!-- Radio Buttons -->
             <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" checked> Images
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2"> QR Codes
-            </label>
-          </div></h1>
+              <label class="btn btn-secondary active" id="normalButton">
+                <input type="radio" name="options" id="option1" checked> Images
+              </label>
+              <label class="btn btn-secondary" id="qrButton">
+                <input type="radio" name="options" id="option2"> QR Codes
+              </label>
+            </div>
+            <!-- End of Radio Buttons -->
+          </h1>
           <hr />
           <div class="row">
             <div class="col-sm-6 col-md-12 col-lg-6">
-              <a href="https://misterjosh.github.io/Homework%2005%20-%20Weekday%20Scheduler%20(3rd%20Party%20APIs)/Develop/index.html" target="_blank"><img class="img-fluid port-image" src="assets/imgs/DayPlanner.png" alt="a picture of my day planner app"></a>
+              <a href="https://misterjosh.github.io/Homework%2005%20-%20Weekday%20Scheduler%20(3rd%20Party%20APIs)/Develop/index.html" target="_blank"><img class="img-fluid port-image" id="img1" src="assets/imgs/DayPlanner.png" alt="a picture of my day planner app"></a>
             </div>
             <div class="col-sm-6 col-md-12 col-lg-6">
-              <a href="https://misterjosh.github.io/Homework-06-WeatherApp/index.html" target="_blank"><img class="img-fluid port-image" src="assets/imgs/WeatherApp.png" alt="a picture of my weather dashboard app"></a>
+              <a href="https://misterjosh.github.io/Homework-06-WeatherApp/index.html" target="_blank"><img class="img-fluid port-image" id="img2" src="assets/imgs/WeatherApp.png" alt="a picture of my weather dashboard app"></a>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6 col-md-12 col-lg-6">
-              <a href="https://misterjosh.github.io/Project-1%20-translation-app/index.html" target="_blank"><img class="img-fluid port-image" src="assets/imgs/TranslationApp.png" alt="a picture of my translation app"></a>
+              <a href="https://misterjosh.github.io/Project-1%20-translation-app/index.html" target="_blank"><img class="img-fluid port-image" id="img3" src="assets/imgs/TranslationApp.png" alt="a picture of my translation app"></a>
             </div>
             <div class="col-sm-6 col-md-12 col-lg-6">
               <img class="img-fluid port-image" src="https://via.placeholder.com/350x350" alt="">
@@ -112,6 +115,7 @@
 
   <!-- Bootstrap CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="portfolio.js"></script>
 
 </body>
 
