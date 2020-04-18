@@ -23,7 +23,7 @@ This project is licensed under the ${license} license.`
 
 // Development will happen in generate markdown
 function generateMarkdown(data, data1) {
-   return `# Title: ${data.title}
+   return `# ${data.title}
    
 # Description: 
    ${data.description}
