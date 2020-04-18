@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    var textIn = "";
-    var searchSel = "";
-    var langSel = "";
+    let textIn = "";
+    let searchSel = "";
+    let langSel = "";
  
 
     //Variables
@@ -19,10 +19,10 @@ $(document).ready(function(){
         searchSel = "Chinese";
     })
 
-    var copyBtn = $("#copyBtn").on("click", function() {
+    const copyBtn = $("#copyBtn").on("click", function() {
         // console.log("Copy Selected");
         if (textOut !== "") {
-            var textOut = $("#outputText");
+            let textOut = $("#outputText");
             textOut.select();
             document.execCommand("copy");
         }
@@ -49,20 +49,7 @@ $(document).ready(function(){
         }
     })
 
-        // if(searchSel=== ""){
-        //     console.log("searchSel if");
-        //     return;
-            
-        // }else{
-        //     textIn = $("#inputText").val();
-        //     console.log(textIn);
-        //     console.log("else");
-
-
-        // }
-
-
-    var clearBtn = $("#clearBtn").on("click", function() {
+    const clearBtn = $("#clearBtn").on("click", function() {
         // console.log("Clear Selected");
         $("#inputText").val("");
         $("#outputText").val("");
