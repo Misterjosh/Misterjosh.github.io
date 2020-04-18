@@ -46,6 +46,12 @@ const questions = [
         type: "input",
         name: "tests",
         message: "Any testing involved? If so, how do you run it?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Email address to be contacted at",
+        default: "I prefer to keep my email address private."
     }
 ];
 
