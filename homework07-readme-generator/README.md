@@ -1,41 +1,45 @@
-# My Good READNE Generator
+# My Good README Generator
    
 # Description: 
-   This is a Node.js app with some JSON. It helps you build a better looking README file by giving you a template.
+   This is a Node.js app that helps build a README file
 
 # Table of Contents:
 
-  - Installation Instructions - Anything you need to install to make My Good READNE Generator work
+  - Installation Instructions - Anything you need to install to make My Good README Generator work
 
-  - Usage Info - Lets you know how to use My Good READNE Generator
+  - Usage Info - Lets you know how to use My Good README Generator
 
-  - Contributing Guidelines - How you can help improve My Good READNE Generator
+  - Contributing Guidelines - How you can help improve My Good README Generator
 
-  - Testing Info - Any built in testing for My Good READNE Generator
+  - Testing Info - Any built in testing for My Good README Generator
 
-  - Licensing Info - Keeping My Good READNE Generator as legal as possible
+  - Licensing Info - Keeping My Good README Generator as legal as possible
   
-  - Questions or Concerns - Pass on your feedback for My Good READNE Generator
+  - Questions or Concerns - Pass on your feedback for My Good README Generator
 
 
 # Installation Instructions: 
-  It needs a simple (npm install). After that it is just (node index) to run it.
+  It needs a "npm install". After that it just needs "node index" to start the process
 
 # Usage Info: 
-  WARNING! This will overwrite a file with the same name. To avoid overwriting my README, I have it generate GoodREADME.md instead.
+  WARNING! It will write over any file with the same name. To avoid destroying the current README I have it create GoodREDME. Make sure to change it back to README when you move it
 
 # Contributing Guidelines: 
-  I can't think of anything for you to contribute. If you have suggestions/improvements, please let me know.
+  I am open to suggestions/improvements. Contact information can be found below
 
 # Testing Info: 
-  There are no built in tests.
+  There are no built in tests
 
-# Licensing Info: 
+# Licensing Info:
+
+  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/my-good-readme-generator)
+
   ## License
 
 This project is licensed under the wtfpl license.
-  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/my-good-readne-generator)
 
 # Questions or Concerns: 
-  
-  [!(https://avatars0.githubusercontent.com/u/58442707?v=4)] If you have any questions feel free to find me on GitHub. My email address is: defaultjoshua@gmail.com
+
+![](https://avatars0.githubusercontent.com/u/58442707?v=4) 
+
+If you have any questions feel free to find me on GitHub. I'm Misterjosh and my email address is: defaultjoshua@gmail.com

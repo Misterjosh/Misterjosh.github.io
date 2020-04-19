@@ -55,13 +55,17 @@ function generateMarkdown(data, data1) {
 # Testing Info: 
   ${data.tests}
 
-# Licensing Info: 
-  ${renderLicenseSection(data.license)}
+# Licensing Info:
+
   ${renderLicenseBadge(data.license, data.github, data.title)}
 
+  ${renderLicenseSection(data.license)}
+
 # Questions or Concerns: 
-  
-[!(${data1.data.avatar_url})] If you have any questions feel free to find me on GitHub. My email address is: ${data.email}`;
+
+![](${data1.data.avatar_url}) 
+
+If you have any questions feel free to find me on GitHub. I'm ${data.github} and my email address is: ${data.email}`;
 
 
 }

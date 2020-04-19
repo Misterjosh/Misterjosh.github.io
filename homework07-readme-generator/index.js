@@ -35,7 +35,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Is a license associated with this project?",
-        choices: ["MIT", "Apache 2.0", "GPL Lv3", "Affero GPL", "Artistic License 2.0", "BSD 2-Clause License", "BSD 3-Clause License", "Eclipse Public License v1.0", "LGPL v2.1", "LGPL v3", "Mozilla Public License Version 2.0", "Public Domain (Unlicense)", "None" ]
+        choices: ["mit", "cc", "wtfpl", "gpl", "lgpl", "isc", "postgresql", "nsca", "unlicense", "zlib", "None"]
     },
     {
         type: "input",
