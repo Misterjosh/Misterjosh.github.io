@@ -38,4 +38,4 @@ This project is licensed under the MIT license.
 
 # Questions or Concerns: 
   If you have any questions feel free to find me on GitHub
-[!(https://avatars0.githubusercontent.com/u/58442707?v=4)] My email address is: defaultjoshua@gmail.com
+![](https://avatars0.githubusercontent.com/u/58442707?v=4) My email address is: defaultjoshua@gmail.com
