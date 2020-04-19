@@ -60,8 +60,8 @@ function generateMarkdown(data, data1) {
   ${renderLicenseBadge(data.license, data.github, data.title)}
 
 # Questions or Concerns: 
-  If you have any questions feel free to find me on GitHub
-[! ${data1.data.avatar_url}] My email address is: ${data.email}`;
+  
+[!(${data1.data.avatar_url})] If you have any questions feel free to find me on GitHub. My email address is: ${data.email}`;
 
 
 }
