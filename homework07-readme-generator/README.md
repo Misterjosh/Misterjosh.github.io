@@ -22,7 +22,7 @@
   It needs a "npm install". After that it just needs "node index" to start the process
 
 # Usage Info: 
-  WARNING! It will write over any file with the same name. To avoid destroying the current README I have it create GoodREDME. Make sure to change it back to README when you move it
+  WARNING! It will write over any file with the same name. To avoid destroying the current README I have it create GoodREADME. Make sure to change it back to README when you move it
 
 # Contributing Guidelines: 
   I am open to suggestions/improvements. Contact information can be found below
