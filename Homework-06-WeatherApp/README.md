@@ -1,46 +1,45 @@
-# 06 Server-Side APIs: Weather Dashboard
+# My Weather Dashboard
+   
+# Description: 
+   This is a Weather App that allows you to search weather by city.  It will give you the current weather, the uv index, and a 5 day forecast
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+# Table of Contents:
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+  - Installation Instructions - Anything you need to install to make My Weather Dashboard work
 
-## User Story
+  - Usage Info - Lets you know how to use My Weather Dashboard
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+  - Contributing Guidelines - How you can help improve My Weather Dashboard
 
-## Acceptance Criteria
+  - Testing Info - Any built in testing for My Weather Dashboard
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-```
+  - Licensing Info - Keeping My Weather Dashboard as legal as possible
+  
+  - Questions or Concerns - Pass on your feedback for My Weather Dashboard
 
-The following image demonstrates the application functionality:
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
+# Installation Instructions: 
+  Nothing needs to be installed to use this
 
-## Review
+# Usage Info: 
+  There is nothing additional needed to operate this app
 
-You are required to submit the following for review:
+# Contributing Guidelines: 
+  If you want to contribute, know this uses the OpenWeather Api. Make sure to read up properly use data from the api call
 
-* The URL of the deployed application.
+# Testing Info: 
+  No testing was built around this app
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+# Licensing Info:
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/my-weather-dashboard)
+
+  ## License
+
+This project is licensed under the wtfpl license.
+
+# Questions or Concerns: 
+
+![](https://avatars0.githubusercontent.com/u/58442707?v=4) 
+
+If you have any questions feel free to find me on GitHub. I'm Misterjosh and my email address is: defaultjoshua@gmail.com

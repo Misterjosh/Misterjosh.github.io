@@ -1,23 +1,45 @@
-I mamanged to do this thanks to a series of YouTube videos by James Q. Quick. I wasn't able to get there on my own. Something is clearly not clicking for me with JavaScript at this point.
+# The Quiz Game
+   
+# Description: 
+   It is a basic quiz game. Multiple choice, tracks score and time, has a start and end screen, also displays high scores
 
-I followed the videos along until he got into moving the questions into a JSON file. At that I was lost. I decided to keep them in an array in my JavaScript file.
+# Table of Contents:
 
-I tried getting the timer to work, but kept constantly breaking the question display.
+  - Installation Instructions - Anything you need to install to make The Quiz Game work
 
-I believe in honesty. So, I thought I would make that known.
+  - Usage Info - Lets you know how to use The Quiz Game
 
-I worked on my own code until Friday evening. At that point I got the prebuilt code Brooks put together. I tried to get an idea of what to fix in my code. It didn't help me. No fault to him, it's my issue.
+  - Contributing Guidelines - How you can help improve The Quiz Game
 
-Sunday I gave up on my original and started this.
- 
-I also came to the understanding that there is a chance that becoming a full stack developer is beyond where I am now and possibly what I am capable of.
+  - Testing Info - Any built in testing for The Quiz Game
 
-There was a point that I cried over my level of frustration.
+  - Licensing Info - Keeping The Quiz Game as legal as possible
+  
+  - Questions or Concerns - Pass on your feedback for The Quiz Game
 
-This doesn't upset me anymore. I have really put in the time, read, reviewed, watched videos, and googled like crazy. I have put in over 35 hours on this homework alone.
 
-I'm just not getting, or completely missing something(s).
+# Installation Instructions: 
+  Nothing needs to be installed to use this
 
-Don't read this as me giving up. I still plan to learn and try. I'm just not on the level of 'make my own quiz game' currently. Hopefully this pandemic gets resolved. I need to start working with a tutor.
+# Usage Info: 
+  This version was assembled with a lot of help from a YouTube video series by James Quick
 
-P.S. As of March 20th I am making decent progress with the starter code written by brooks. Hopefully I can salvage this train wreck and submit something functional. It is looking like 1/3 of the original plethora of files. I'm optimistic.
+# Contributing Guidelines: 
+  Nothing need contributed. Feel free to build your own. Just watch the videos mentioned above
+
+# Testing Info: 
+  No testing is involved with this project
+
+# Licensing Info:
+
+  [![GitHub license](https://img.shields.io/badge/license-cc-blue.svg)](https://github.com/Misterjosh/the-quiz-game)
+
+  ## License
+
+This project is licensed under the cc license.
+
+# Questions or Concerns: 
+
+![](https://avatars0.githubusercontent.com/u/58442707?v=4) 
+
+If you have any questions feel free to find me on GitHub. I'm Misterjosh and my email address is: defaultjoshua@gmail.com

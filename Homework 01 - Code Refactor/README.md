@@ -1,19 +1,45 @@
-# 01 HTML CSS Git: Code Refactor
+# Code Refactor
+   
+# Description: 
+   This was an early homework in my coding boot camp. We had to take poorly written code and improve upon it
 
-The changes I made to the html portion of the homework. All changes are commented on their respective pages.
+# Table of Contents:
 
-HTML
+  - Installation Instructions - Anything you need to install to make Code Refactor work
 
-I changed the color of a background block from a blue color to red.
+  - Usage Info - Lets you know how to use Code Refactor
 
-I have the Horiseon name a link to Google.com
+  - Contributing Guidelines - How you can help improve Code Refactor
 
-I gave the banner list links to the paragraphs that they are about through internal links.
+  - Testing Info - Any built in testing for Code Refactor
 
-I made the images on the blue cards have links to wikipedia pages about thier subject matter.
+  - Licensing Info - Keeping Code Refactor as legal as possible
+  
+  - Questions or Concerns - Pass on your feedback for Code Refactor
 
-CSS
 
-I fixed the issue with Calibri. It needed '' around it to make it work.
+# Installation Instructions: 
+  Nothing needs to be installed with this
 
-I compressed redundant code to save lines.
+# Usage Info: 
+  There is nothing you need to know about this beyond the discription
+
+# Contributing Guidelines: 
+  Honestly there is not much to contribute to this. It is very basic and serves no real function.
+
+# Testing Info: 
+  There was no testing involved
+
+# Licensing Info:
+
+  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/code-refactor)
+
+  ## License
+
+This project is licensed under the wtfpl license.
+
+# Questions or Concerns: 
+
+![](https://avatars0.githubusercontent.com/u/58442707?v=4) 
+
+If you have any questions feel free to find me on GitHub. I'm Misterjosh and my email address is: deafultjoshua@gmail.com
