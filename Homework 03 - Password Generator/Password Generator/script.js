@@ -1,5 +1,5 @@
 //array for random numbers
-var numArr = [
+const numArr = [
   '0', 
   '1', 
   '2', 
@@ -12,7 +12,7 @@ var numArr = [
   '9'
 ]
 //array for lowercase letters
-var lowArr = [
+const lowArr = [
   'a',
   'b',
   'c',
@@ -41,7 +41,7 @@ var lowArr = [
   'z'
 ]
 //array for uppercase letters
-var upperArr = [
+const upperArr = [
   'A',
   'B',
   'C',
@@ -70,7 +70,7 @@ var upperArr = [
   'Z'
 ]
 //array for special characters
-var specialArr = [
+const specialArr = [
   ' ',
   '!',
   '#',
@@ -103,10 +103,10 @@ var specialArr = [
   '?'
 ]
 
-var pwArr = []
+let pwArr = [];
 
 //Length Variable and trying to force a numeric input
-var pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
+let pwLength = prompt("Choose the length of your password. Choose from 8 to 128 characters.");
 //console.log(pwLength);
 if (pwLength >=8 && pwLength <=128 && pwLength != '') {
   alert("Your password will be " + pwLength +  " characters long.");
@@ -180,7 +180,7 @@ if(hasNum === true && hasUp === true && hasSpec === true){
 //console.log(selArr);
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
@@ -196,6 +196,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //Generate Password function needs to do something
 function generatePassword() {
+  passwordText = '';
   for(i=0; i<pwLength; i++) {
     pwArr.push(selArr[Math.floor(Math.random() * selArr.length)]);
     var pwVar = pwArr.join('');
