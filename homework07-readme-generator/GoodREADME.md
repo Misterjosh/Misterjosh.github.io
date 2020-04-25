@@ -1,38 +1,38 @@
-# My personal GitHub Repository
+# My Team Generator
    
 # Description: 
-   This is a repo I made to host homework and projects. The earliest will be from my time at Case Western Reserve University's Full Stack Web Development Coding Boot Camp
+   It is a card generator that allows you to build a team constisting of a manger and any number of engineers and/or interns.
 
 # Table of Contents:
 
-  - Installation Instructions - Anything you need to install to make My personal GitHub Repository work
+  - Installation Instructions - Anything you need to install to make My Team Generator work
 
-  - Usage Info - Lets you know how to use My personal GitHub Repository
+  - Usage Info - Lets you know how to use My Team Generator
 
-  - Contributing Guidelines - How you can help improve My personal GitHub Repository
+  - Contributing Guidelines - How you can help improve My Team Generator
 
-  - Testing Info - Any built in testing for My personal GitHub Repository
+  - Testing Info - Any built in testing for My Team Generator
 
-  - Licensing Info - Keeping My personal GitHub Repository as legal as possible
+  - Licensing Info - Keeping My Team Generator as legal as possible
   
-  - Questions or Concerns - Pass on your feedback for My personal GitHub Repository
+  - Questions or Concerns - Pass on your feedback for My Team Generator
 
 
 # Installation Instructions: 
-  There is nothing to install with this repo
+  You are just a basic npm install from running it. Node app starts it up.
 
 # Usage Info: 
-  Know that this is a way for me to show my work and nothing more than that
+  I added a custom CSS sheet to change the color of a few things.
 
 # Contributing Guidelines: 
-  The only contributions wanted are in the form of suggestions. Thank you
+  I can't think of anything I want contributed to this, but feel free to let me know or make suggestions.
 
 # Testing Info: 
-  No additional or outside testing is associated with this repo
+  There are a few built in tests to ensure each type of employee works properly.
 
 # Licensing Info:
 
-  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/my-personal-github-repository)
+  [![GitHub license](https://img.shields.io/badge/license-wtfpl-blue.svg)](https://github.com/Misterjosh/my-team-generator)
 
   ## License
 
