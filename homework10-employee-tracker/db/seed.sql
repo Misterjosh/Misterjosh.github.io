@@ -29,10 +29,10 @@ VALUES
     ('Pat', 'Smith', 6, 3),
     ('Mike', 'Richey', 8, 4);
     
-INSERT INTO manager
-    (first_name, last_name, role_id)
-VALUES
-    ('Walt', 'Disney', 1),
-    ('Bill', 'Lumbergh', 3),
-    ('Martha', 'Stewart', 5),
-    ('Steve', 'Jobs', 7);
+-- INSERT INTO manager
+--     (first_name, last_name, role_id)
+-- VALUES
+--     ('Walt', 'Disney', 1),
+--     ('Bill', 'Lumbergh', 3),
+--     ('Martha', 'Stewart', 5),
+--     ('Steve', 'Jobs', 7);

@@ -256,7 +256,7 @@ async function updateEmployeeRole() {
 //Create updateEmployeeManager function
 async function updateEmployeeManager() {
  const employees = await db.findAllEmployees();
- const managers =  await db.findAllManagers();
+ 
 
  const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
    name: `${first_name} ${last_name}`,
@@ -271,9 +271,11 @@ const { employeeId } = await prompt([{
   }
 ]);
 
-const managerChoices = managers.map(({ manager, manager_id }) => ({
-    name: manager,
-    value: manager_id
+const managers =  await db.findAllEmployeesBut(employeeId);
+
+const managerChoices = managers.map(({ id, first_name, last_name }) => ({
+    name: `${first_name} ${last_name}`,
+    value: id
 }));
 
 const {managerId} = await prompt([
