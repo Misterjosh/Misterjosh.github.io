@@ -24,10 +24,15 @@ VALUES
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ('Joshua', 'Brooks', 4, 1);
+    ('Joshua', 'Brooks', 4, 1),
+    ('James', 'Petty', 2, 2),
+    ('Pat', 'Smith', 6, 3),
+    ('Mike', 'Richey', 8, 4);
     
-
 INSERT INTO manager
     (first_name, last_name, role_id)
 VALUES
-    ('Bill', 'Lumbergh', 3);
+    ('Walt', 'Disney', 1),
+    ('Bill', 'Lumbergh', 3),
+    ('Martha', 'Stewart', 5),
+    ('Steve', 'Jobs', 7);

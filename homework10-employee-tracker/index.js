@@ -377,7 +377,7 @@ async function removeRole() {
   loadMainPrompts();
 }
 
-//Create viewDepartments function - Added to show departments. Didn't make sense to add or remove a department without seeing what ones there were.
+// View Departments function - It didn't make sense to add or remove a department without also seeing what ones there were.
 async function viewDepartments() {
   const departments = await db.findAllDepartments();
 
