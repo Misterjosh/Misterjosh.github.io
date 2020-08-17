@@ -1,187 +1,92 @@
-$(document).ready(function(){
+// Make sure the page loads before the JavaScript
+$(document).ready(() => {
 
-    let textIn = "";
-    let searchSel = "";
-    let langSel = "";
- 
-
-    //Variables
-        //Buttons
-    $("#spanish").on("click", function() {
-        // console.log("Spanish Selected");
-        langSel = "es";
-        searchSel = "Spanish";
-    })
+// Translate button functionality
+$("#translate-button").on("click", () => {
+    // clear books info
+    $("#book-section-header").empty();
+    $(".books").empty();
+    // get the selected language value
+    const selLanguage = $("#langVal").val();
+    // get the input text value 
+    const inputText = $("#inputText").val();
+    // get the language name from selected dropdown
+    const langName = $("#langVal option:selected").text();
+    // validate there is input to translate
+    if ($("#inputText").val() === "") {
+        // make a modal appear
+        $("#myModal").modal();
+    } 
+    // if we do have text then we translate
+    if ($("#inputText").val() !== "") {
+        // call function for translation API call
+        translateCall(selLanguage, inputText);
+        // call function for books API call
+        booksCall(langName);
+    }
     
-    $("#chinese").on("click", function() {
-        // console.log("Chinese Selected");
-        langSel = "zh";
-        searchSel = "Chinese";
-    })
+}); // closing brackets for translate button
 
-    const copyBtn = $("#copyBtn").on("click", function() {
-        // console.log("Copy Selected");
-        if (textOut !== "") {
-            let textOut = $("#outputText");
-            textOut.select();
-            document.execCommand("copy");
-        }
-    })
+// clear all button
+$("#clear-button").on("click", () => {
+    // clear the input text
+    $("#inputText").val("");
+    // clear the translation
+    $("#outputText").val("");
+    // clear the books
+    $("#book-section-header").empty();
+    $(".books").empty();
 
-    $("#translateBtn").on("click", function() {
-        // console.log("Translate Selected");
-            $(".books").empty();
-            $("#book-section-header").empty();
-        if (langSel == "") {
-            // console.log("Select a language");
-            langAlert();
-            return;
-        }
-        if ($("#inputText").val() === "") {
-            // console.log("Text input needed to translate");
-            textAlert();
-            return;
-        }
-        if ($(langSel).val() !== "" && $("#inputText").val() !== "") {
-            textIn = $("#inputText").val();
-            console.log("You have both required values");
-            loadAlert();
-        }
-    })
+}); // closing bracket for clear button
 
-    const clearBtn = $("#clearBtn").on("click", function() {
-        // console.log("Clear Selected");
-        $("#inputText").val("");
-        $("#outputText").val("");
-        $(".books").empty();
-        $("#book-section-header").empty();
-    })
-    
+// copy text button
+$("#copy-button").on("click", () => {
+    // validate if there is anything to copy
+    const copyText = $("#outputText");
+    if (copyText !== "") {
+        copyText.select();
+        document.execCommand("copy");
+    }
 
-    
-// console.log(searchSel);
-  
+}); // closing bracket for copy button
 
-const apiKey = "trnsl.1.1.20200328T161314Z.bcd4843be4019ae7.a951bdf2b7f5fbb7821f0f8421561bb28404dea0";
-
-// Set endpoints
-const endpoints = {
-  translate: "",
-  detect: "detect",
-  languages: "languages"
-};
-
-// Abstract API request function
-function makeApiRequest(endpoint, data, type, authNeeded) {
-  url = "https://translate.yandex.net/api/v1.5/tr.json/getLangs?ui=en-es&key=trnsl.1.1.20200328T161314Z.bcd4843be4019ae7.a951bdf2b7f5fbb7821f0f8421561bb28404dea0" + endpoint;
-  url += "?key=" + apiKey;
-
-  // If not listing languages, send text to translate
-  if (endpoint !== endpoints.languages) {
-    url += "&q=" + encodeURI(data.textToTranslate);
-  }
-
-  // If translating, send target and source languages
-  if (endpoint === endpoints.translate) {
-    url += "&target=" + data.targetLang;
-    url += "&source=" + data.sourceLang;
-  }
-
-$.ajax({
-    url:  "https://translate.yandex.net/api/v1.5/tr.json/getLangs?ui=" + langSel + "&key=trnsl.1.1.20200328T161314Z.bcd4843be4019ae7.a951bdf2b7f5fbb7821f0f8421561bb28404dea0",
-    method: "GET"
-  }).then(function(response) {
-    // console.log(response);
-})
-    
-}
-
-// Translate Function
-function translateFunc() {
-    
-    // console.log(langSel);
-    
-    //debugger;
-    $.getJSON('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20200328T161314Z.bcd4843be4019ae7.a951bdf2b7f5fbb7821f0f8421561bb28404dea0&lang=' + langSel + '&text=' + textIn, function(json) {
-
-        var allResponse = (JSON.stringify(json));
-
-        // console.log(allResponse);
-
-        var JSONObject = JSON.parse(allResponse);
-        var translatedText = JSONObject["text"];
-        $('#outputText').val(translatedText);
-
-        // console.log(translatedText);
-    });
-}
-
-// Book loading function
-function loadBooks() {
+// function to make api call
+translateCall = (language, text) => {
     $.ajax({
-        url:  "https://www.googleapis.com/books/v1/volumes?q=learning" + searchSel,
+        url: "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20200328T161314Z.bcd4843be4019ae7.a951bdf2b7f5fbb7821f0f8421561bb28404dea0&lang=" + language + "&text=" + text,
         method: "GET"
-      }).then(function(response) {
-        
-        // Create header using searchSel value
-        $("<h3>").text("Interested in learning more about " + searchSel + "?").appendTo("#book-section-header");
-        
+    }).then((response) => $("#outputText").val(JSON.parse(JSON.stringify(response)).text));
+
+}; // closing bracket for translateCall
+
+// function for getting books about the language
+booksCall = (language) => {
+    $.ajax({
+        url:  "https://www.googleapis.com/books/v1/volumes?q=learning" + language,
+        method: "GET"
+    }).then((response) => {
+        // take the paramter and response then build a card section
+        // make a header from function parameter
+        $("<h3>").text("Interested in learning more about " + language + "?").appendTo("#book-section-header");
+        $("<h5>").text("(If empty, no learning books with cover images)").appendTo("#book-section-header");
+        // make up to 6 cards of books from the response
         for (var i = 0; i < 6; i++) {
-            
+            // defining card components
             var card = $("<div>").addClass("card col-lg-2 col-sm-4 col-xs-6");
             var cardBody = $("<div>").addClass("card-body d-flex flex-column justify-content-start align-items-stretch");
-            
             var thumbnail = $("<img>").addClass("card-img-top").attr("src", response.items[i].volumeInfo.imageLinks.thumbnail);
             var bookTitle = $("<h5>").addClass("card-title").text(response.items[i].volumeInfo.title);
             var preview = $("<a>").addClass("card-text").text("Preview");
+            // build the card
             $(preview).attr({"href": response.items[i].volumeInfo.previewLink, "target": "_blank"});
-    
             $(cardBody).append(bookTitle, preview);
             $(card).append(thumbnail, cardBody);
-            $(".books").append(card);  
-        }
-    })
-}
+            $(".books").append(card);
 
-// GIF loading function
-function loadGif() {
-    $.ajax({
-        url:"https://api.giphy.com/v1/stickers/random?apikey=7blOnFlsou2ztWcQmEG5aqY5m2sMr5A5&tag=" + searchSel + "&limit=1&rating=G",
-        method: "GET"
-        }).then(function(response) {
-            $("#search-sel").text("Getting your " + searchSel + " translation");
-            $("#modal-img").attr("src", response.data.image_url);
-            setTimeout(function() {
-                $('#loading-modal').modal('hide');
-                translateFunc();
-                loadBooks();
-                }, 
-              2000);
-        })
-}
-// 
+        }; // closing bracket of for loop
 
-function langAlert() {
-    $("#translateBtn").attr({"data-toggle": "modal", "data-target": "#alert-modal"});
-    $("#alert-message").text("Please select a language");
-}
+    }); // end of .then()
 
-function textAlert() {
-    $("#translateBtn").attr({"data-toggle": "modal", "data-target": "#alert-modal"});
-    $("#alert-message").text("Text input needed to translate");
-}
+}; // closing bracket for booksCall
 
-function loadAlert() {
-    $("#translateBtn").attr({"data-toggle": "modal", "data-target": "#loading-modal"});
-    loadGif();
-
-}
-
-
-});    
-
-
-
-
-
-
+}); // closing brackets for document.ready
